@@ -6,12 +6,12 @@
   "Reverse Geocoding
   Reverse geocoding is the process of converting a coordinate or location (latitude, longitude) to a readable address or place name. This permits the identification of nearby street addresses, places, and/or area subdivisions such as a neighborhood, county, state, or country."
   ([lat lon format normalizecity ] (reverse-with-http-info lat lon format normalizecity nil))
-  ([lat lon format normalizecity {:keys [addressdetails accept-language namedetails extratags ]}]
+  ([lat lon format normalizecity {:keys [addressdetails accept-language namedetails extratags statecode ]}]
    (check-required-params lat lon format normalizecity)
    (call-api "/reverse.php" :get
              {:path-params   {}
               :header-params {}
-              :query-params  {"lat" lat "lon" lon "format" format "normalizecity" normalizecity "addressdetails" addressdetails "accept-language" accept-language "namedetails" namedetails "extratags" extratags }
+              :query-params  {"lat" lat "lon" lon "format" format "normalizecity" normalizecity "addressdetails" addressdetails "accept-language" accept-language "namedetails" namedetails "extratags" extratags "statecode" statecode }
               :form-params   {}
               :content-types []
               :accepts       ["application/json"]
