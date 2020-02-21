@@ -15,6 +15,7 @@
   {:base-url        "https://eu1.locationiq.com/v1"
    :date-format     "yyyy-MM-dd"
    :datetime-format "yyyy-MM-dd'T'HH:mm:ss.SSSXXX"
+   :decode-models   false
    :debug           false
    :auths           {"key" nil}})
 
